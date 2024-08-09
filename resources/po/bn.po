@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: phpMyAdmin 6.0.0-dev\n"
 "Report-Msgid-Bugs-To: translators@phpmyadmin.net\n"
-"POT-Creation-Date: 2024-07-21 00:22+0000\n"
+"POT-Creation-Date: 2024-08-04 00:21+0000\n"
 "PO-Revision-Date: 2022-02-15 16:21+0000\n"
 "Last-Translator: Maurício Meneghini Fauth <mauricio@fauth.dev>\n"
 "Language-Team: Bengali <https://hosted.weblate.org/projects/phpmyadmin/"
@@ -213,7 +213,7 @@ msgstr "%s এর পরে"
 #: resources/templates/table/zoom_search/index.twig:120
 #: src/Config/ConfigFile.php:553
 #: src/Controllers/JavaScriptMessagesController.php:220
-#: src/Display/Results.php:929 src/Plugins/Export/ExportSql.php:2071
+#: src/Display/Results.php:934 src/Plugins/Export/ExportSql.php:2071
 #: src/Plugins/Schema/SchemaPdf.php:96
 msgid "None"
 msgstr "কিছু না"
@@ -1054,7 +1054,7 @@ msgstr "সহ-অনুসন্ধান"
 #: resources/templates/triggers/row.twig:31 src/Config/Descriptions.php:926
 #: src/ConfigStorage/UserGroups.php:112
 #: src/Controllers/JavaScriptMessagesController.php:401
-#: src/Display/Results.php:2472 src/Html/Generator.php:517
+#: src/Display/Results.php:2477 src/Html/Generator.php:517
 #: src/Html/Generator.php:783
 msgid "Edit"
 msgstr "সম্পাদনা"
@@ -1073,7 +1073,7 @@ msgstr "সম্পাদনা"
 #: resources/templates/setup/home/index.twig:69
 #: resources/templates/sql/query.twig:188
 #: src/Controllers/JavaScriptMessagesController.php:403
-#: src/Display/Results.php:2531 src/Tracking/Tracking.php:224
+#: src/Display/Results.php:2536 src/Tracking/Tracking.php:224
 msgid "Delete"
 msgstr "মুছ"
 
@@ -2182,14 +2182,15 @@ msgid "Query window"
 msgstr "অনুসন্ধান উইন্ডো"
 
 #: resources/templates/database/multi_table_query/form.twig:27
-#: resources/templates/database/multi_table_query/form.twig:117
+#: resources/templates/database/multi_table_query/form.twig:126
 #, fuzzy
 #| msgid "Select Tables"
 msgid "select table"
 msgstr "টেবল নির্বাচন"
 
 #: resources/templates/database/multi_table_query/form.twig:34
-#: resources/templates/database/multi_table_query/form.twig:125
+#: resources/templates/database/multi_table_query/form.twig:84
+#: resources/templates/database/multi_table_query/form.twig:134
 #, fuzzy
 #| msgid "Select two columns"
 msgid "select column"
@@ -2239,8 +2240,8 @@ msgstr "গুছানো"
 #: resources/templates/server/status/processes/list.twig:14
 #: resources/templates/table/operations/index.twig:28
 #: resources/templates/table/search/index.twig:158
-#: src/Config/ConfigFile.php:553 src/Display/Results.php:1457
-#: src/Display/Results.php:1464 src/Util.php:1983 src/Util.php:2000
+#: src/Config/ConfigFile.php:553 src/Display/Results.php:1462
+#: src/Display/Results.php:1469 src/Util.php:1983 src/Util.php:2000
 msgid "Ascending"
 msgstr "উর্ধ্ব মূখী"
 
@@ -2251,8 +2252,8 @@ msgstr "উর্ধ্ব মূখী"
 #: resources/templates/server/status/processes/list.twig:12
 #: resources/templates/table/operations/index.twig:32
 #: resources/templates/table/search/index.twig:162
-#: src/Config/ConfigFile.php:553 src/Display/Results.php:1452
-#: src/Display/Results.php:1469 src/Util.php:1988 src/Util.php:2005
+#: src/Config/ConfigFile.php:553 src/Display/Results.php:1457
+#: src/Display/Results.php:1474 src/Util.php:1988 src/Util.php:2005
 msgid "Descending"
 msgstr "অধ মুখী"
 
@@ -2262,42 +2263,42 @@ msgstr "অধ মুখী"
 msgid "Add as"
 msgstr "%s যোগ কর"
 
-#: resources/templates/database/multi_table_query/form.twig:107
+#: resources/templates/database/multi_table_query/form.twig:116
 #: src/Config/ConfigFile.php:544 src/Config/ConfigFile.php:556
 #: src/Config/ConfigFile.php:564
 msgid "Text"
 msgstr "টেক্সট"
 
-#: resources/templates/database/multi_table_query/form.twig:108
+#: resources/templates/database/multi_table_query/form.twig:117
 #, fuzzy
 #| msgid "Move column"
 msgid "Another column"
 msgstr "স্বম্ভ সরাও"
 
-#: resources/templates/database/multi_table_query/form.twig:135
+#: resources/templates/database/multi_table_query/form.twig:144
 msgid "Enter criteria as free text"
 msgstr ""
 
-#: resources/templates/database/multi_table_query/form.twig:142
+#: resources/templates/database/multi_table_query/form.twig:151
 #, fuzzy
 #| msgid "Remove chart"
 msgid "Remove this column"
 msgstr "চিত্র মুছ"
 
-#: resources/templates/database/multi_table_query/form.twig:150
+#: resources/templates/database/multi_table_query/form.twig:159
 #: resources/templates/table/relation/foreign_key_row.twig:85
 #, fuzzy
 #| msgid "Add column"
 msgid "+ Add column"
 msgstr "স্বম্ভ যোগ করা"
 
-#: resources/templates/database/multi_table_query/form.twig:165
+#: resources/templates/database/multi_table_query/form.twig:174
 #, fuzzy
 #| msgid "Update Query"
 msgid "Update query"
 msgstr "অনুসন্ধান আপডেট"
 
-#: resources/templates/database/multi_table_query/form.twig:166
+#: resources/templates/database/multi_table_query/form.twig:175
 #: src/Html/Generator.php:542
 #, fuzzy
 #| msgid "Submit Query"
@@ -3251,12 +3252,12 @@ msgid "Extra options"
 msgstr "রুটিনের পছন্দসমূহ"
 
 #: resources/templates/display/results/table.twig:212
-#: src/Display/Results.php:1111
+#: src/Display/Results.php:1116
 msgid "Partial texts"
 msgstr "আংশিক লেখা"
 
 #: resources/templates/display/results/table.twig:216
-#: src/Display/Results.php:1115
+#: src/Display/Results.php:1120
 msgid "Full texts"
 msgstr "সম্পুর্ন লেখা"
 
@@ -3299,7 +3300,7 @@ msgstr "ভালভাবে জানা বাইনারী"
 #: resources/templates/display/results/table.twig:324
 #: resources/templates/gis_data_editor_form.twig:75
 #: src/Controllers/JavaScriptMessagesController.php:491
-#: src/Display/Results.php:2476 src/Html/Generator.php:78
+#: src/Display/Results.php:2481 src/Html/Generator.php:78
 msgid "Copy"
 msgstr "প্রতিলিপি"
 
@@ -6426,7 +6427,7 @@ msgid "Start auto refresh"
 msgstr ""
 
 #: resources/templates/server/status/processes/list.twig:44
-#: src/Display/Results.php:2550
+#: src/Display/Results.php:2555
 msgid "Kill"
 msgstr "হত্যা"
 
@@ -6831,7 +6832,7 @@ msgstr "প্রোফাইলিং এর ফলাফল"
 #: src/Controllers/Table/Partition/RepairController.php:47
 #: src/Controllers/Table/Partition/TruncateController.php:48
 #: src/Controllers/Table/RelationController.php:141
-#: src/Database/Routines.php:995 src/Display/Results.php:3134
+#: src/Database/Routines.php:995 src/Display/Results.php:3139
 #: src/Message.php:122
 msgid "Your SQL query has been executed successfully."
 msgstr "আপনার SQL অনুসন্ধানটি সফলভাবে কাজ করেছে."
@@ -12960,7 +12961,7 @@ msgid "Success!"
 msgstr "সফল।"
 
 #: src/Controllers/Database/StructureController.php:576
-#: src/Display/Results.php:3411
+#: src/Display/Results.php:3416
 #, php-format
 msgid ""
 "This view has at least this number of rows. Please refer to "
@@ -16300,7 +16301,7 @@ msgstr "ভুল তথ্য"
 msgid "Wrong data or no validation for %s"
 msgstr ""
 
-#: src/Controllers/Sql/SqlController.php:230 src/Sql.php:1049
+#: src/Controllers/Sql/SqlController.php:230 src/Sql.php:1050
 #, php-format
 msgid "Bookmark %s has been created."
 msgstr "বুকমার্ক %s তৈরী করা হয়েছে।"
@@ -16797,33 +16798,33 @@ msgid ""
 "available, but is being hidden by the %s configuration directive."
 msgstr ""
 
-#: src/Display/Results.php:2507 src/Display/Results.php:2522
+#: src/Display/Results.php:2512 src/Display/Results.php:2527
 msgid "The row has been deleted."
 msgstr "রো টি মুছা হয়েছে।"
 
-#: src/Display/Results.php:3420
+#: src/Display/Results.php:3425
 #, php-format
 msgid "Showing rows %1s - %2s"
 msgstr "রো দেখাচ্ছে %1s - %2s"
 
-#: src/Display/Results.php:3434
+#: src/Display/Results.php:3439
 #, fuzzy, php-format
 #| msgid "%1$d total, %2$d in query"
 msgid "%1$s total, %2$s in query"
 msgstr "মোট %1$d, অনুসন্ধানে %2$d"
 
-#: src/Display/Results.php:3439
+#: src/Display/Results.php:3444
 #, fuzzy, php-format
 #| msgid "%d total"
 msgid "%s total"
 msgstr "%d মোট"
 
-#: src/Display/Results.php:3452 src/Sql.php:865
+#: src/Display/Results.php:3457 src/Sql.php:865
 #, php-format
 msgid "Query took %01.4f seconds."
 msgstr "অনুসন্ধানে %01.4f সেঃ লেগেছ."
 
-#: src/Display/Results.php:3758
+#: src/Display/Results.php:3763
 msgid "Link not found!"
 msgstr "সংযোগটি পাওয়া যায়নি!"
 
@@ -19424,7 +19425,7 @@ msgstr "বুকমার্ক \"%s\" দেখার জন্য স্ব�
 msgid "Showing as PHP code"
 msgstr "পিএইছপি কোড দেখাচ্ছে"
 
-#: src/Sql.php:1215
+#: src/Sql.php:1219
 #, fuzzy, php-format
 #| msgid ""
 #| "Current selection does not contain a unique column. Grid edit, checkbox, "
@@ -19436,7 +19437,7 @@ msgstr ""
 "এই নির্বাচনে কোন অনন্য স্তম্ভ নাই। সম্পাদনা, চেকবক্স, প্রতিলিপি এবং মুছার ব্যবস্থা কাজ "
 "করবে না।"
 
-#: src/Sql.php:1229
+#: src/Sql.php:1233
 #, fuzzy, php-format
 #| msgid ""
 #| "Current selection does not contain a unique column. Grid edit, checkbox, "
