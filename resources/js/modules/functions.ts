@@ -1091,7 +1091,7 @@ export function onloadSqlQueryEditEvents () {
 
         var $form = $(this).parent().parent().find('form');
         var sqlQuery = ($form.find('input[name=\'sql_query\']').val() as string).trim();
-        var $innerSql = $(this).parent().parent().parent().prev().find('code.sql');
+        var $innerSql = $(this).parent().parent().parent().prev().find('code.sql').closest('pre');
 
         var newContent = '<textarea name="sql_query_edit" id="sql_query_edit">' + escapeHtml(sqlQuery) + '</textarea>\n';
         newContent += getForeignKeyCheckboxLoader();
@@ -1141,7 +1141,7 @@ export function onloadSqlQueryEditEvents () {
 
     $(document).on('click', 'input#sql_query_edit_discard', function () {
         var $divEditor = $('div#inline_editor_outer');
-        $divEditor.siblings('code.sql').show();
+        $divEditor.siblings('pre').show();
         $divEditor.remove();
     });
 
@@ -2325,11 +2325,14 @@ export function onloadEnumSetEditor (): void {
 
         // Add the parsed values to the editor
         var dropIcon = getImageTag('b_drop');
+        var dragIcon = '<span class="drag-handle">&#9776;</span>';
         for (i = 0; i < values.length; i++) {
             fields += '<tr><td>' +
                 '<input type=\'text\' value=\'' + values[i] + '\'>' +
                 '</td><td class=\'drop\'>' +
                 dropIcon +
+                '</td><td class="drag-col">' +
+                dragIcon +
                 '</td></tr>';
         }
 
@@ -2341,7 +2344,7 @@ export function onloadEnumSetEditor (): void {
             '<div class="card-body">' +
             '<p>' + getImageTag('s_notice') +
             window.Messages.enum_hint + '</p>' +
-            '<table class="table table-borderless values">' + fields + '</table>' +
+            '<table class="table table-borderless values"><tbody>' + fields + '</tbody></table>' +
             '</div><div class="card-footer">' +
             '<table class="table table-borderless add"><tr><td>' +
             '<div class="slider"></div>' +
@@ -2380,6 +2383,14 @@ export function onloadEnumSetEditor (): void {
 
         $('#enumEditorModal').modal('show');
         $('#enumEditorModal').find('.modal-body').first().html(dialog);
+        $('#enumEditorModal .values tbody').sortable({
+            axis: 'y',
+            containment: 'parent',
+            handle: '.drag-handle',
+            cursor: 'move',
+            tolerance: 'pointer'
+        });
+
         // slider for choosing how many fields to add
         $('#enumEditorModal').find('.slider').slider({
             animate: true,
@@ -2572,6 +2583,8 @@ export function onloadEnumSetEditor (): void {
                     '<input type=\'text\'>' +
                     '</td><td class=\'drop\'>' +
                     getImageTag('b_drop') +
+                    '</td><td class="drag-col">' +
+                    '<span class="drag-handle">&#9776;</span>' +
                     '</td></tr>'
                 )
                 .find('tr').last()

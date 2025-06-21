@@ -217,7 +217,7 @@ class Results
         private readonly string $sqlQuery,
     ) {
         $this->relation = new Relation($this->dbi);
-        $this->transformations = new Transformations();
+        $this->transformations = new Transformations($this->dbi, $this->relation);
         $this->template = new Template();
 
         $this->setDefaultTransformations();
@@ -1426,14 +1426,14 @@ class Results
         array $orderUrlParams,
         array $multiOrderUrlParams,
     ): string {
-        $urlPath = Url::getFromRoute('/sql', $multiOrderUrlParams, false);
+        $urlPath = Url::getFromRoute('/sql', $multiOrderUrlParams, true);
         $innerLinkContent = htmlspecialchars($fieldsMeta->name) . $orderImg
             . '<input type="hidden" value="'
             . $urlPath
             . '">';
 
         return Generator::linkOrButton(
-            Url::getFromRoute('/sql', $orderUrlParams, false),
+            Url::getFromRoute('/sql', $orderUrlParams, true),
             null,
             $innerLinkContent,
             ['class' => 'sortlink'],
@@ -2740,7 +2740,7 @@ class Results
             // some results of PROCEDURE ANALYSE() are reported as
             // being BINARY but they are quite readable,
             // so don't treat them as BINARY
-        } elseif ($meta->isBinary() && $this->isAnalyse !== true) {
+        } elseif ($meta->isBinary() && ! $this->isAnalyse) {
             // we show the BINARY or BLOB message and field's size
             // (or maybe use a transformation)
             $binaryOrBlob = 'BLOB';

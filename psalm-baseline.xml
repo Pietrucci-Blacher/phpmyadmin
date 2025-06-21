@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="6.11.0@4ed53b7ccebc09ef60ec4c9e464bf8a01bfd35b0">
+<files psalm-version="6.12.0@cf420941d061a57050b6c468ef2c778faf40aee2">
   <file src="app/services_loader.php">
     <MixedArgument>
       <code><![CDATA[$argumentName]]></code>
@@ -1429,11 +1429,6 @@
       <code><![CDATA[$sql]]></code>
     </UnusedProperty>
   </file>
-  <file src="src/Controllers/Import/SimulateDmlController.php">
-    <RiskyTruthyFalsyComparison>
-      <code><![CDATA[empty($statement->join)]]></code>
-    </RiskyTruthyFalsyComparison>
-  </file>
   <file src="src/Controllers/Import/StatusController.php">
     <MixedArgument>
       <code><![CDATA[$_SESSION['Import_message']['message'] ?? '']]></code>
@@ -1628,7 +1623,6 @@
       <code><![CDATA[empty($createOptions['checksum'])]]></code>
       <code><![CDATA[empty($createOptions['delay_key_write'])]]></code>
       <code><![CDATA[empty($createOptions['delay_key_write'])]]></code>
-      <code><![CDATA[empty(Current::$messageToShow)]]></code>
     </RiskyTruthyFalsyComparison>
   </file>
   <file src="src/Controllers/Operations/ViewController.php">
@@ -1835,8 +1829,6 @@
     </MixedArgumentTypeCoercion>
     <RiskyTruthyFalsyComparison>
       <code><![CDATA[empty($_REQUEST['ajax_page_request'])]]></code>
-      <code><![CDATA[empty($routinename)]]></code>
-      <code><![CDATA[empty($routinename)]]></code>
     </RiskyTruthyFalsyComparison>
   </file>
   <file src="src/Controllers/Server/ReplicationController.php">
@@ -3390,10 +3382,6 @@
       <code><![CDATA[$oneKey->constraint]]></code>
       <code><![CDATA[$origData['settings_data']]]></code>
     </PossiblyNullArgument>
-    <PossiblyNullArrayOffset>
-      <code><![CDATA[$indexArray1]]></code>
-      <code><![CDATA[$indexArray2]]></code>
-    </PossiblyNullArrayOffset>
     <PossiblyNullOperand>
       <code><![CDATA[$oneKey->refTableName]]></code>
     </PossiblyNullOperand>
@@ -4622,9 +4610,9 @@
     </RedundantPropertyInitializationCheck>
   </file>
   <file src="src/Gis/GisMultiPolygon.php">
-    <ArgumentTypeCoercion>
+    <InvalidArgument>
       <code><![CDATA[$pointsArr]]></code>
-    </ArgumentTypeCoercion>
+    </InvalidArgument>
     <MixedArgument>
       <code><![CDATA[$dataRow[$k][$i][$j] ?? null]]></code>
       <code><![CDATA[$labelPoint[0]]]></code>
@@ -4742,9 +4730,9 @@
     </RedundantPropertyInitializationCheck>
   </file>
   <file src="src/Gis/GisPolygon.php">
-    <ArgumentTypeCoercion>
+    <InvalidArgument>
       <code><![CDATA[$pointsArr]]></code>
-    </ArgumentTypeCoercion>
+    </InvalidArgument>
     <MixedArgument>
       <code><![CDATA[$dataRow[$i][$j] ?? null]]></code>
     </MixedArgument>
@@ -6433,7 +6421,6 @@
     <RiskyTruthyFalsyComparison>
       <code><![CDATA[empty($column->collation)]]></code>
       <code><![CDATA[empty($config->selectedServer['port'])]]></code>
-      <code><![CDATA[empty($delimiter)]]></code>
       <code><![CDATA[empty($statement->fields)]]></code>
       <code><![CDATA[empty($statement->name->database)]]></code>
       <code><![CDATA[empty($statement->name->database)]]></code>
@@ -8314,8 +8301,8 @@
       <code><![CDATA[$config->getCookie('phpMyAdmin')]]></code>
     </MixedArgument>
     <RiskyTruthyFalsyComparison>
-      <code><![CDATA[empty(ini_get('session.auto_start'))]]></code>
-      <code><![CDATA[empty(session_id())]]></code>
+      <code><![CDATA[ini_get('session.auto_start')]]></code>
+      <code><![CDATA[session_id()]]></code>
     </RiskyTruthyFalsyComparison>
     <UnusedFunctionCall>
       <code><![CDATA[session_save_path]]></code>
@@ -9003,11 +8990,6 @@
     </PossiblyNullArgument>
   </file>
   <file src="src/Transformations.php">
-    <DeprecatedMethod>
-      <code><![CDATA[DatabaseInterface::getInstance()]]></code>
-      <code><![CDATA[DatabaseInterface::getInstance()]]></code>
-      <code><![CDATA[DatabaseInterface::getInstance()]]></code>
-    </DeprecatedMethod>
     <LessSpecificReturnStatement>
       <code><![CDATA['PhpMyAdmin\\Plugins\\Transformations\\' . str_replace('/', '\\', explode('.php', $filename)[0])]]></code>
     </LessSpecificReturnStatement>
